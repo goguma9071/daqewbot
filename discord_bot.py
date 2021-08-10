@@ -4,7 +4,7 @@ import random
 
 client = discord.Client()
 
-token = "ODY5NDE4MDA5NjQ1Njk1MDE2.YP96ng.fe2SQhLHFIYmEhl63ZL4ED7H3Vs"
+token = "ODY5NDE4MDA5NjQ1Njk1MDE2.YP96ng.6ZFQTlZslQ7GjvMbAiQl7SwcfbI"
 
 @client.event
 async def on_ready():
@@ -26,9 +26,9 @@ async def on_message(message):
     if message.content == "!dq 로블은":
         await message.channel.send("Идиот Отаку")
     if message.content == "!dq 도와줘":
-        await message.channel.send("사용법: !dq [명령어] 명령어: 고구마는 다큐는 곤잘은 !Faitful는 나의 팬티색은? 오팬무 오늘의 곤잘 팬티는?")
+        await message.channel.send("사용법: !dq [명령어] 명령어: 고구마는 다큐는 곤잘은 로블은 나의 팬티색은? 오팬무 오늘의 곤잘 팬티는? 오늘의 운세")
     if message.content == "!dq 오팬무":
-        await message.channel.send("연하늘")
+        await message.channel.send("핑크")
     if message.content == "!dq 나의 팬티색은?":
         ran = random.randint(0,9)
         if ran == 0:
@@ -64,15 +64,16 @@ async def on_message(message):
     if message.content == "!dq 오늘의 운세":
         ran = random.randint(0,3)
         if ran == 0:
-            d = "길가다가 벼락맞음"
+            d = "길가다가 똥밟음"
         if ran == 1:
             d = "니 하고 있는거 다 망함"
         if ran == 2:
             d = "탈모 생김+여친없음"
         if ran == 3:
             d = "pvp 10연패함"
-        await message.channle.send(d)
-
+        await message.channel.send(d)
+    if message.content == "!dq kt5g는":
+        await message.channel.send("여기서 가장 정상적인 사람")
 
 
 client.run(token)
