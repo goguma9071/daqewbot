@@ -4,7 +4,7 @@ import random
 
 client = discord.Client()
 
-token = "ODY5NDE4MDA5NjQ1Njk1MDE2.YP96ng.ZU0XW-XIKzpwpjOLfnmaPUxlJL4"
+token = "ODY5NDE4MDA5NjQ1Njk1MDE2.YP96ng.PVT0z6sPAryMJ-3XijMsHWEcLJM"
 
 @client.event
 async def on_ready():
@@ -74,7 +74,7 @@ async def on_message(message):
         await message.channel.send(d)
     if message.content == "!dq kt5g는":
         await message.channel.send("여기서 가장 정상적인 사람")
-    if message.content == "@다큐봇":
+    if message.content == "@ 다큐봇":
         await message.channel.send("핑하지마 병신아")
 
 
