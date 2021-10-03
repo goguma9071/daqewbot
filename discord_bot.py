@@ -1,6 +1,8 @@
 import discord
 import asyncio
 import random
+import giphy_client
+from giphy_client.rest import ApiException
 
 client = discord.Client()
 
@@ -76,6 +78,20 @@ async def on_message(message):
         await message.channel.send("여기서 가장 정상적인 사람")
     if message.content == "@ 다큐봇":
         await message.channel.send("핑하지마 병신아")
+@client.command()
+async def gif(ctx,*,q="Smile"):
+
+    api_key = 'qjQXKgB1ofJXMoeC3V86VLr19pKyHjvM'
+    api_instance = giphy_client.DefaultApi()
+
+    try:
+        api_responce = api_instance.gifs.search.get(api_key , q, limit=5, rating='g')
+        lst = list(api_responce.data)
+        giff = random.choice(lst)
+        await ctx.channel.send(giff.embed.url)
+
+    except ApiException as e:
+        print("Exception when calling api")
 
 
 client.run(token)
